@@ -9,22 +9,7 @@ namespace ConAppAssignment24
 {
     public class Program
     {
-        static void MapProperties(Source source, Destination destination)
-        {
-            PropertyInfo[] sourceproperties = typeof(Source).GetProperties();
-            PropertyInfo[] destinationproperties = typeof(Destination).GetProperties();
-            foreach (var sourceproperty in sourceproperties)
-            {
-                foreach (var destinationproperty in destinationproperties)
-                {
-                    if (sourceproperty.Name== destinationproperty.Name && (sourceproperty.PropertyType == destinationproperty.PropertyType))
-                    {
-                        destinationproperty.SetValue(destination, sourceproperty.GetValue(source));
-                        break;
-                    }
-                }
-            }
-        }
+        
         static void Main(string[] args)
         {
             Source source = new Source();
@@ -36,7 +21,8 @@ namespace ConAppAssignment24
             Console.WriteLine("Enter Date of Joining");
             source.Doj = DateTime.Parse(Console.ReadLine());
             Destination destination = new Destination();
-            MapProperties(source, destination);
+            OurClass I= new OurClass();
+            I.MapProperties(source, destination);
             Console.WriteLine("**** Mapped Properties in Destination ****");
             Console.WriteLine($"ID         : \t{destination.Id}");
             Console.WriteLine($"Name       : \t{destination.Name}");
