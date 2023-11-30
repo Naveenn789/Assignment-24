@@ -11,6 +11,7 @@ namespace ConAppAssignment24
         public int Id { get; set; }
         public string Name { get; set; }
         public DateTime Doj { get; set; }
-        public string Description { get; set; }
+        public string Email { get; set; }
+        public string MobileNumber { get; set; }
     }
 }

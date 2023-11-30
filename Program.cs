@@ -24,10 +24,11 @@ namespace ConAppAssignment24
             OurClass I= new OurClass();
             I.MapProperties(source, destination);
             Console.WriteLine("**** Mapped Properties in Destination ****");
-            Console.WriteLine($"ID         : \t{destination.Id}");
-            Console.WriteLine($"Name       : \t{destination.Name}");
-            Console.WriteLine($"Doj        : \t{destination.Doj}");
-            Console.WriteLine($"Description: \t{destination.Description}");
+            Console.WriteLine($"ID           : \t{destination.Id}");
+            Console.WriteLine($"Name         : \t{destination.Name}");
+            Console.WriteLine($"Doj          : \t{destination.Doj}");
+            Console.WriteLine($"Email        : \t{destination.Email}");
+            Console.WriteLine($"Mobile Number: \t{destination.MobileNumber}");
             Console.ReadKey();
         }
     }
